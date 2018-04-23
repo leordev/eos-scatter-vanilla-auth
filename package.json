@@ -19,6 +19,8 @@
     "webpack": "^4.6.0"
   },
   "dependencies": {
-    "eosjs": "^8.0.0"
+    "axios": "^0.18.0",
+    "eosjs": "^8.0.0",
+    "eosjs-ecc": "^2.0.1"
   }
 }
