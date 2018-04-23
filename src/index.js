@@ -48,12 +48,18 @@
     replaceContent([newContent]);
   }
 
-  const installationFail = () => {
-    return installationSuccess(); // TODO: remove it when the chrome store is working
+  const installationFail = (error) => {
+    console.error(error);
     var newContent = document.createElement('p');
     newContent.className = 'has-text-danger';
-    newContent.innerHTML = 'The installation has failed, please refresh the page and try again';
-    replaceContent([newContent]);
+    newContent.innerHTML = 'The installation has failed, please install manually from Chrome Extensions Store and refresh this page';
+
+    const manualInstall = document.createElement('a');
+    manualInstall.textContent = 'Install Scatter Wallet from Chrome Store';
+    manualInstall.setAttribute('href', 'https://chrome.google.com/webstore/detail/scatter/ammjpmhgckkpcamddpolhchgomcojkle');
+    manualInstall.setAttribute('target', '_blank')
+
+    replaceContent([newContent, manualInstall]);
   }
 
   const identityStep = () => {
