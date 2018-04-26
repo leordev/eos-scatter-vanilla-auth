@@ -13,4 +13,3 @@ npm install
 npm start
 ```
 
-It's a `webpack-dev-server`, you may be required to install it with `webpack` globally.
